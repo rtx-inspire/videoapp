@@ -1,1 +1,16 @@
-<h2>Lobby</h2>
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <section id="form-container">
+        <img id="logo" src="{% static 'images/logo.jpg' %}" alt="">
+        <div>
+            <h1>Welcome to PChatz</h1>
+            <p>Group Video Calling Application made by <strong>Pratik Das</strong></p>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
