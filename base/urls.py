@@ -3,5 +3,13 @@ from . import views
 
 urlpatterns = [
     path('', views.lobby),
-    path('room/', views.room)
+    path('room/', views.room),
+
+    path('get_token/', views.getToken),
+
+    path('create_user/', views.createUser),
+
+    path('get_user/', views.getUser),
+
+    path('delete_user/', views.deleteMember),
 ]
