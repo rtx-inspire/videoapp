@@ -60,11 +60,14 @@ def getUser(request):
 def deleteMember(request):
     data = json.loads(request.body)
 
-    user = RoomMember.objects.get(
+    try:
+        user = RoomMember.objects.get(
         name = data['name'],
         uid = data['UID'],
         room_name = data['room_name'],
-    )
-    user.delete()
+        )
+        user.delete()
+    except RoomMember.DoesNotExist:
+        user = None
 
     return JsonResponse('Member Deleted', safe=False)
