@@ -80,7 +80,14 @@ WSGI_APPLICATION = 'pChatz.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://videouser_user:DwvmQWyEYlnyuEVBhs47KCrxMoBQKsq9@dpg-ciu16cdiuiedpv6kc5eg-a.singapore-postgres.render.com/videouser')
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'neondb',
+    'USER': 'rtx-inspire',
+    'PASSWORD': 'DGPqMzl8R5iV',
+    'HOST': 'ep-wild-block-09080009.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+  }
 }
 
 
